@@ -94,3 +94,50 @@ Kod envanterinden çıkan, hangi fikri seçersek seçelim geçerli üç gerçek:
 3. **Sky Pulse (Fikir 7) — katman olarak.** Düşük maliyetli (veri kaynaklarının çoğu entegre), share-card viral döngüsüne en uygun içerik, bir sonraki büyük gök olayından *önce* hazır olmak koşuluyla.
 
 Aviation Radio (PM'in 1 no'lu fikri) doğrulanmış en güçlü ödeme-istekliliği kanıtına sahip olmaya devam ediyor; bu üçü onun alternatifi değil, portföy tamamlayıcısı. Seçim "hangisi tek başına" değil "hangi sıra ile" sorusu.
+
+---
+
+## Ek — Gerçek yorum verisi (21 Ağustos 2026 güncellemesi)
+
+Ekip 5 uygulama için gerçek, tarihli, kategori ve duygu-durumu etiketli App Store yorum export'u paylaştı: **1.947 yorum, 20 Şubat – 18 Ağustos 2026, US mağaza**. Bu veri yukarıdaki arama-tabanlı tahminlerin yerini alıyor — artık gerçek yüzdeler var. Kapsam: NewsBreak (698), SmartNews (550), ATC – Live Air Traffic Radio (315), Ground News (244) ve **yeni bir rakip: FlightDeck – Flight Tracker (140)**.
+
+**Önemli metodoloji notu:** bu export'taki ortalama rating'ler (1.9–3.1 arası) App Store'daki gerçek toplam rating'lerle (örn. NewsBreak halka açık 4.8) **uyuşmuyor**. Kategori/duygu etiketi taşıyan "detaylı" yorumlar sisteme muhtemelen içerik yazma eğilimi olan (çoğunlukla mutsuz) kullanıcılardan öncelikli giriyor. Yani buradaki oranları *mutlak memnuniyet* değil, **şikayet dağılımı ve göreli ağırlık** olarak okuyun — dört rakipteki hâlihazırdaki bulguları teyit/inceltme amaçlı.
+
+### Uçuş takibi üçgeni artık iki değil üç oyunculu
+
+FlightDeck – Flight Tracker (Attracts Inc.) daha önce incelemediğimiz bir rakip: ATC'nin AI-transkript + harita mekaniğine benzer ama farklı bir çekirdek özellikle giriyor — **ACARS** (uçak-yer veri linki mesajları, ham metin olarak). Yorumlarda "ACARS &amp; flight logs features are unique to this app... definitely worth the price" — bu gerçek bir farklılaşma sinyali, aviation idea'mıza eklenebilir bir katman.
+
+Ama asıl bulgu **fiyatlama tepkisinin şiddeti, sayısallaştırılmış**:
+
+| | ATC | FlightDeck |
+|---|---|---|
+| Negatif yorumların Monetization/Pricing içerme oranı | **%78.4** | **%73.5** |
+| Örnek yorum | "$90/year, are to nuts? Forced to watch a demo... LiveATC.net is free." | "Why tf can i not enjoy a free flight tracker without a subscription... flightradar24 is free" |
+| Aylık ortalama rating trendi | Şub 3.44 → Ağu 2.97 (**sürekli düşüş**, kullanıcı tabanı büyüdükçe hype-affiliate erken benimseyicilerin yerini fiyata duyarlı mainstream kullanıcı alıyor) | Şub'dan itibaren hep 1.9–2.6 bandı, hiç toparlanmadı |
+
+Bu, önceki raporda "ATC $89.99/yıl'a rağmen top-5 grossing" diye övülen modelin **churn/rating maliyetini** gösteriyor: iki rakip de negatif yorumların ~4'te 3'ünü fiyatlamaya kaptırmış, ikisi de kıyaslamada hep FlightRadar24'ün (algısal olarak) ücretsiz olmasına çarpıyor. **Aviation Radio fikri için netleşen ders:** cömert bir ücretsiz katman (temel harita + gecikmeli/sınırlı ses) + makul fiyatlı derinlik, "$90/yıl hard paywall + 10 dakikalık atlanamaz onboarding video" modelinden çok daha az churn üretir — biz bu ikisinin bıraktığı memnuniyetsiz kullanıcı havuzuna doğrudan konumlanabiliriz.
+
+**Yeni, isim-isim özellik talepleri (ATC yorumlarından):** iPad native versiyon yok ("major gap"), pil tüketimi şikayeti, **belirli havalimanı adlarıyla** kapsama talebi (KLAL, KSRQ, SAN, FLL), Avrupa havalimanı kapsaması talebi, AirShow frekansları için özel bölüm, ve bir kullanıcı doğrudan "ATC canlı yayının FlightDeck'e entegrasyonunu" istiyor — yani **ACARS + canlı ATC sesi + uçuş takibi tek üründe** birleşsin talebi zaten kullanıcıdan geliyor.
+
+### AI güveni: görünür yetenek sevilir, görünmez içerik değirmeni nefret edilir
+
+Yorum metinlerinde "AI" geçen yorumların ortalama rating'i uygulama başına çarpıcı bir zıtlık gösteriyor:
+
+- **ATC:** AI bahsi geçen yorumlar ortalama **5.0** — "The team at Enhanced Radar is using AI in a unique and novel way that truly stands out." AI burada *görünür, anlaşılır bir yetenek* (canlı transkript) olduğu için sevilior.
+- **NewsBreak:** AI bahsi geçen yorumlar ortalama **1.95** — "Stop using ai slop and fake advertisement", "AI Trash: The whole apps video section is full of cheap AI ads." AI burada *görünmez bir içerik değirmeni* (insan gazeteciliğinin yerini alan otomatik üretim) olarak algılandığı için nefret ediliyor.
+- **SmartNews:** benzer şekilde AI bahsi geçen yorumlar ortalama **1.25**.
+
+Bu, mevcut raporun "AI'ı gizli içerik değirmeni değil, kaynak gösteren doğrulayan katman yap" tavsiyesini sayısal olarak doğruluyor ve keskinleştiriyor: **AI'ın kullanıcıya görünür ve anlaşılır bir iş yaparken gösterilmesi** (transkript, çeviri, özet — kaynağı belli) güven kazandırıyor; **AI'ın içerik üretimini gizlice devralması** güveni yok ediyor. News Bot ve Places fikirlerinde AI'ı her zaman "bunu senin için X kaynaktan yaptım" diye görünür kılmak gerekiyor.
+
+### BlindSpot: önyargıyı göstermek sevilir, önyargılı *olduğunu düşünülmek* nefret edilir
+
+Ground News'te "bias" geçen 63 yorum tam ikiye bölünüyor: **31 tanesi 5 yıldız** ("Now I Understand!! ...has shown me how rare it is for the 'other side' to even hear the important stories" gibi övgüler), **25 tanesi 1-2 yıldız** ("Amazing how the 'factual' ratings are slanted even here", "It does not fact check anything"). Aynı kelime, ürünün metodolojisine güvenip güvenmemeye göre en olumlu ve en olumsuz uçlara dağılıyor. Buna karşın NewsBreak ve SmartNews'te "bias" bahsi geçen yorumlar neredeyse tamamen olumsuz (ortalama ~2.0) — bu iki uygulama önyargıyı *göstermiyor*, sadece önyargılı *olmakla suçlanıyor*. **BlindSpot fikri için ders:** önyargıyı şeffaf gösterme konsepti gerçek ve kanıtlanmış talep — ama metodolojiye güven kırılgan, tek taraflı bir "yanlış etiketleme" şikayeti tüm ürünü "sahte tarafsızlık" kategorisine düşürebilir. Coğrafi kaynak dağılımı (hangi ülkenin basını nasıl gördü) muhtemelen "sol/sağ" ikili etiketlemeden daha az tartışmalı bir başlangıç noktası, çünkü politik taraf ataması değil, gözlemlenebilir bir coğrafi gerçek.
+
+### Diğer evrensel sinyal: iptal sürtünmesi
+
+"Cancel" kelimesi geçen yorumların ortalama rating'i her uygulamada 1.0–2.3 arası — istisnasız kötü. Ground News'te "Nearly impossible to cancel subscription... you need to talk to support to actually close your account, like a cable company" gibi doğrudan dark-pattern suçlamaları var. **Ders:** iOS Pro aboneliğimizin iptal akışı App Store'un standart (tek dokunuşla) akışından hiçbir şekilde saptırılmamalı — bu, rakiplerin en ucuz kaybettiği güven puanı.
+
+### Öncelik önerisine etkisi
+
+Bu gerçek veri, önceki önceliklendirmeyi değiştirmiyor ama **Aviation Radio'yu güçlendiriyor**: iki farklı rakip (ATC, FlightDeck) aynı fiyatlama hatasını yapıyor ve ikisinin de negatif yorumlarının ~%75'i bunu doğruluyor — bu, "cömert free tier + makul fiyat" ile girecek bir oyuncu için kanıtlanmış, büyük ve aktif olarak büyüyen bir memnuniyetsiz kullanıcı havuzu demek. ACARS özelliği ve isim-isim havalimanı talepleri, ilk ürün kapsamına eklenebilecek somut, ucuz kazanımlar.
+
