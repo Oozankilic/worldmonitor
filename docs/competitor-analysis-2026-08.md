@@ -143,61 +143,74 @@ Bu gerçek veri, önceki önceliklendirmeyi değiştirmiyor ama **Aviation Radio
 
 ---
 
-## Ek 2 — Uygulama bazında negatif yorum raporu
+## Ek 2 — Uygulama bazında negatif yorum raporu (fiyat/ödeme hariç, ürün odaklı — 21 Ağustos revizyonu)
 
-Her uygulamanın 1–2 yıldızlı yorumlarını ayrı ayrı derinlemesine inceledik: en çok tekrar eden şikayet kategorileri (etiketlerin kendi içindeki gerçek yüzdeleri), aylık negatif-pay trendi (kötüleşiyor mu iyileşiyor mu) ve doğrudan alıntılar. Amaç: hangi rakipte hangi acı en taze ve en büyük, oradan başlayalım.
+**Neden yeniden yaptık:** ilk versiyonda her uygulamanın negatif yorumlarını olduğu gibi analiz etmiştik, ama fiyatlama şikayetleri — özellikle iki uçuş takibi uygulamasında (ATC, FlightDeck) — hacim olarak her şeyi gölgede bırakıyordu (negatif yorumların ~%75'i). Fiyatlamanın sorun olduğunu zaten biliyoruz; asıl soru "fiyat bir kenara, ürünün kendisinde ne bozuk" sorusu. Bu yüzden her uygulama için **Monetization/Pricing/Payment etiketlerinden hiçbirini taşımayan** 1–2 yıldızlı yorumları ayrı bir havuzda topladık ve analizi o havuz üzerinden tekrarladık. (Bir review'da fiyat + ürün şikayeti birlikte geçiyorsa da havuz dışında tutuldu — amaç "saf ürün" sinyali.)
 
-### NewsBreak — 366 / 698 negatif (%52.4) · trend: iyileşiyor (Şubat %64 → Ağustos %45)
+**Ürün-odaklı negatif havuzun boyutu, tüm örneklem içinde:**
 
-**Şikayet dağılımı (negatif yorumların içinde):** Content %62.6 · Advertisements %31.7 · Performance And Bugs %15.6 · Notifications %15.0 · Monetization %11.7
+| Uygulama | Toplam yorum | Fiyat hariç negatif | Payı |
+|---|---|---|---|
+| SmartNews | 550 | 269 | %48.9 |
+| NewsBreak | 698 | 315 | %45.1 |
+| Ground News | 244 | 65 | %26.6 |
+| FlightDeck | 140 | 21 | %15.0 |
+| ATC | 315 | 25 | %7.9 |
+
+Bu tablo tek başına çarpıcı: **ATC ve FlightDeck'in negatif yorumlarının ezici çoğunluğu SADECE fiyatla ilgili** — ürünle ilgili saf şikayet payı sırasıyla %7.9 ve %15.0'a düşüyor. Yani konsept (canlı ATC + AI transkript + harita, ya da ACARS + uçuş takibi) aslında iyi karşılanıyor; asıl dert fiyatlandırma ve satın alma akışı. Haber uygulamalarında ise tam tersi: fiyatlama zaten küçük bir paydı, ürün şikayetleri değişmeden kaldı.
+
+### NewsBreak — 315 saf ürün şikayeti / 698 toplam (%45.1)
+
+**Şikayet dağılımı (bu havuzun içinde):** Content %66.7 · Advertisements %29.8 · Performance And Bugs %17.1 · Notifications %16.5 · Design %10.2
 
 - **Kritik olayı kaçırma:** *"A police chase literally went through my neighborhood last night and ended with dozens of police officers with guns out looking for suspects in our front yard and this app had ZERO mention of it."* — "yerel haber" iddiasının kendi kanıtladığı en ciddi güven kırılması: gerçek bir olay, sıfır kapsama.
 - **Kullanıcının kendi ağzından pozitif talep:** *"I wish this App was more positive but it's mostly all negativity and I get like eight notifications a day that people have died... I'd rather see more positive stuff."* — Happy variant / Local Pulse pozitif-kategori tezimizi rakibin kendi kullanıcısı doğruluyor.
-- **Moderasyon + spam:** *"Every single time i download it I get slammed with SPAM calls, Spoofs, SPAM Emails... The hateful racist rants in the comments are wild."*
+- **Teknik güvenilirlik:** *"Story never comes up... I get a notification and click on it to open it, the app comes up with just a blank screen and it stays that way."*
 - **Bildirim kontrolü yok:** *"i got this app for fast notification of NEWS... now i get 100 notifications a day about celebrity updates... to configure my push notifications i have to speak to..."* (destek akışına yönlendiriliyor, self-servis ayar yok)
 
 **Bizim için:** En yüksek hacimli rakip (698 yorum) aynı zamanda kendi kullanıcısından en net "daha pozitif olsun" talebini alan rakip. Local Pulse + Verified Alerts ikilisi tam bu boşluğa oturuyor.
 
-### SmartNews — 302 / 550 negatif (%54.9) · trend: **kötüleşiyor hızla** (Haziran %43 → Ağustos %74)
+### SmartNews — 269 saf ürün şikayeti / 550 toplam (%48.9, en yüksek pay)
 
-**Şikayet dağılımı:** Content %61.3 · Advertisements %36.8 · Performance And Bugs %16.2 · Comparative Feedback %15.2 · Feature Requests %10.6
+**Şikayet dağılımı:** Content %65.4 · Advertisements %35.3 · Performance And Bugs %17.8 · Comparative Feedback %17.1 · Feature Requests %9.3
 
-- **Gamification tepkisi (rewards programı), kullanıcının kendi sözleriyle:** *"I've been a long-time user of SmartNews because it felt like a refreshing alternative to the algorithm-driven, attention-hijacking ecosystem... [now] Let us opt out of your points system."* / *"Reading the news isn't a game. And the way the developers have turned it into a game is frankly insulting."* — önceki raporumuzda "2026'da eklenen rewards programı" nötr bir özellik olarak listelenmişti; gerçek veri bunun ciddi bir geri tepme olduğunu gösteriyor ve Ağustos'taki keskin kötüleşmeyle zaman olarak örtüşüyor.
-- **Aylarca çözülmeyen bug:** *"TURN OFF THE HOURLY REFRESH!!!"* — Nisan 2026'da yazılmış, kullanıcı kendi notunda önceki güncellemelerden beri (2025 sonundan) şikayet ettiğini belirtiyor; 6+ ay boyunca kapatılmamış.
-- **Reklam istilası, tekrarlayan versiyonlarda aynı şikayet:** *"Advertising everywhere!... advertisements will pop into your feed and will move the headlines"* — Nisan ve Temmuz'da neredeyse birebir aynı yorum, aynı kullanıcı muhtemelen iki farklı sürümde tekrar denemiş.
-- **Eski haber yeniden servis edilmiş:** *"today, the article that keeps popping up about [a celebrity's] health... you open it, and this happened in 2024."* — NewsBreak'teki "eski haberi taze başlıkla yeniden yayınlama" sorununun SmartNews'te de var olduğunu gösteriyor.
+- **Gamification tepkisi (rewards programı), kullanıcının kendi sözleriyle:** *"I've been a long-time user of SmartNews because it felt like a refreshing alternative to the algorithm-driven, attention-hijacking ecosystem... [now] Let us opt out of your points system."* / *"Reading the news isn't a game. And the way the developers have turned it into a game is frankly insulting."* — önceki raporumuzda "2026'da eklenen rewards programı" nötr bir özellik olarak listelenmişti; gerçek veri bunun ciddi bir geri tepme olduğunu gösteriyor.
+- **Aylarca çözülmeyen bug:** *"TURN OFF THE HOURLY REFRESH!!!"* — kullanıcı önceki güncellemelerden (2025 sonundan) beri şikayet ettiğini belirtiyor; 6+ ay boyunca kapatılmamış.
+- **Bildirim → içerik kopukluğu:** *"Clicking the notification doesn't always take you to the article... instead it just opens the app to the main feed. At that point the story is essentially [lost in the feed]."*
+- **Performans:** *"Slows down iPad & freezes... the longer I read articles, the slower it gets scrolling and closing. Soon the whole thing freezes up... The only remedy is to shut down the iPad and reboot it."*
 
-**Bizim için:** SmartNews'ün en hızlı kötüleşen rakip olması (6 ayda +31 puan negatif pay artışı) özellikle önemli — gamification/rewards gibi "kullanıcıyı daha çok tutacak" sanılan özelliklerin ters tepebileceğinin somut kanıtı. Kendi ürünümüzde gamification eklerken (Sky Pulse'ın "gördüm" rozetleri gibi) bu riski göz önünde bulundurmalıyız: ödül/puan sistemi haber okumayı bir oyuna çevirdiğinde güven kaybı riski var.
+**Bizim için:** Saf ürün şikayeti payı en yüksek uygulama (%48.9) — gamification/rewards gibi "kullanıcıyı daha çok tutacak" sanılan özelliklerin ters tepebileceğinin somut kanıtı. Kendi ürünümüzde gamification eklerken (Sky Pulse'ın "gördüm" rozetleri gibi) bu riski göz önünde bulundurmalıyız.
 
-### Ground News — 114 / 244 negatif (%46.7) · trend: **kötüleşiyor hızla** (Haziran %41 → Ağustos %68)
+### Ground News — 65 saf ürün şikayeti / 244 toplam (%26.6)
 
-**Şikayet dağılımı:** Content %48.2 · Comparative Feedback %26.3 · Monetization %25.4 · Pricing %24.6 · Customer Support %15.8
+**Şikayet dağılımı:** Content %61.5 · Comparative Feedback %38.5 · Performance And Bugs %18.5 · Customer Support %12.3 · Accessibility %9.2
 
-- **Metodolojiye somut, detaylı güvensizlik:** *"Because ground news only relies on two rating sources for bias determination, they do a poor job on their bias ratings. There is a high tendency to list left leaning sources as having mixed or low factuality."* / *"Oversimplified one-dimensional political spectrum that doesn't make sense for many countries... Unreliable detection of 'same story'... Dark patterns that make you jump through extra hoops to share links."* — bu son alıntı özellikle önemli: **kendi "aynı olayı tekilleştirme" (clustering) özelliğinin güvenilmez olduğunu** kullanıcı fark etmiş. World Pulse fikrimizin çekirdek mekaniği (20 kaynağı tek karta indirme) tam bu noktada — Ground News'in başarısız olduğu yerde iyi yapmak gerçek bir kazanım ama aynı zamanda ne kadar zor olduğunun kanıtı.
-- **Paywall dark pattern:** *"Rudely designed setup screens... the design of that screen where it prompts you to accept a free trial is aggressive and clearly designed in a way that makes it difficult to realize [it's optional]."*
-- **Talep görmezden geliniyor:** *"the most negative thing about this company is they flat out ignore [requests to stop sending emails]."*
-- **AI brief kalitesi zayıf, klişeye kaçıyor:** *"The email summaries are particularly poor, relying on shallow regional stereotypes like 'East Coast Elite' and 'West Coast Innovator'. Basically, you get dumber from reading their [summaries]."* — BlindSpot/World Pulse'ta AI brief yazarken kaçınılması gereken somut bir tuzak: bölgesel/politik klişelerle "özetlemek" gerçek sentez değil, gerçek sentezin karikatürü.
+- **Metodolojiye somut, detaylı güvensizlik:** *"Because ground news only relies on two rating sources for bias determination, they do a poor job on their bias ratings. There is a high tendency to list left leaning sources as having mixed or low factuality."* / *"Oversimplified one-dimensional political spectrum that doesn't make sense for many countries... Unreliable detection of 'same story'... Dark patterns that make you jump through extra hoops to share links."* — bu son alıntı özellikle önemli: **kendi "aynı olayı tekilleştirme" (clustering) özelliğinin güvenilmez olduğunu** kullanıcı fark etmiş. World Pulse fikrimizin çekirdek mekaniği tam bu noktada.
+- **Gerçek-zamanlılık iddiasıyla çelişen performans:** *"Lags realtime events... it lags breaking news by hours if not days in most cases... X is where to go for breaking news."*
+- **Erişilebilirlik, yıllardır çözülmemiş ve ciddiye alınmıyor:** *"Have attempted to get Ground News to fix screenreader issues for years. They do not care about blind users. If this company gets big enough to pass the ADA minimum, then I will see them in court."* / *"Inadequate accessibility support... I was told to use Apple's accessibility options... it's annoyingly awkward to use."* — ATC'deki VoiceOver talebiyle aynı boşluk, farklı kategoride.
+- **AI brief kalitesi zayıf, klişeye kaçıyor:** *"The email summaries are particularly poor, relying on shallow regional stereotypes like 'East Coast Elite' and 'West Coast Innovator'. Basically, you get dumber from reading their [summaries]."*
 
-**Bizim için:** Ground News §5 raporunda "risk doğrulandı" dediğimiz şey burada isim isim somutlaşıyor. Coğrafi kaynak dağılımı yaklaşımımız hâlâ doğru bir farklılaşma ama "same story" tekilleştirmesini Ground News'ten daha güvenilir yapmadan bu alana girmek aynı güven krizini miras alır demek.
+**Bizim için:** Fiyat bir kenara bırakıldığında Ground News'in gerçek ürün zaafları netleşiyor: tekilleştirme güvenilmez, "real-time" iddiası gerçek değil (saatler/günler gecikme), erişilebilirlik yıllardır ihmal edilmiş — üçü de World Pulse ve BlindSpot'ta doğrudan rekabet edebileceğimiz, ölçülebilir açık.
 
-### ATC – Live Air Traffic Radio — 134 / 315 negatif (%42.5) · trend: hafif kötüleşiyor, dalgalı (Şubat %31 → Haziran zirve %57 → Ağustos %43)
+### ATC – Live Air Traffic Radio — sadece 25 saf ürün şikayeti / 315 toplam (%7.9, en düşük pay)
 
-**Şikayet dağılımı:** Monetization %62.7 · Pricing %57.5 · Payment %18.7 · Feature Requests %16.4 · Design %16.4
+**Şikayet dağılımı (küçük örneklem, dikkatli okuyun):** Feature Requests %40.0 · Design %36.0 · Service %32.0 · Content %24.0 · Installation And Setup %20.0
 
-- **Fiyat matematiği kullanıcı tarafından çözülmüş:** *"7days free then $89/year: You can't even try this app without selecting a payment option... you can choose to pay $6/week right away. That comes out to over $300/year if you stayed for a whole [year]."*
-- **Ciddi faturalama hataları (tek şikayet değil, tekrarlayan desen):** *"Billing is a nightmare... Apple Store attempted a $99 charge that declined"* / *"Not cool at all... I got a charge of $111 from this app. That would make sense if I was paying for the annual subscription, but I wasn't."* — plan değiştirme akışında gerçek bir bug var gibi görünüyor, tek kullanıcının yanlış anlaması değil.
-- **Atlanamaz onboarding, tekrar eden tema:** *"Annoying intro that is in-mutable and more importantly unskippable. Second, quit asking me survey questions at the beginning."* / *"Not an app it's a five minute advertisement."*
-- **Konsept sevilen ama fiyat kızdıran, en net özeti:** *"Really awesome, Absurd Pricing: The app is extremely clean and simple to use... Just how clean the app is and how good it could be is the reason it is getting more than one star. The price is absurd. Not everything needs to be a subscription."*
+- **Atlanamaz onboarding, en sık tekrarlanan tema:** *"Every time this app updates, you have to go through a 5+ minute, in-skippable, ridiculous intro."* / *"Annoying intro that is in-mutable... quit asking me survey questions at the beginning."* / *"Not an app it's a five minute advertisement."* — fiyatı hariç tutunca bile ürünle ilgili #1 şikayet hâlâ onboarding.
+- **Erişilebilirlik, tek ama net bir talep:** *"I use voiceover, which is designed by Apple for blind and visually impaired users. Is it possible that you could make this app accessible for those of us who rely upon voiceover?"*
+- **Kapsama boşlukları, isim isim:** *"Did not have my local airport RDU available."* / *"ATL was the nearest airport to Chattanooga. I want to listen to the ATC traffic for flights I see from my back porch."* / *"Limited to very few airports."*
+- **Eksik özellik, uçuş takibinin sektör değişiminde kopması:** *"Can a flight be followed in its entirety? It seems to drop once the flight is handed off to a second departure or to center."*
 
-**Bizim için:** ATC negatif yorumlarının çoğunluğu ürünü değil fiyatı ve satın alma akışını hedefliyor — konsept (canlı ATC + AI transkript + harita) neredeyse hiç eleştirilmiyor. Aviation Radio'yu hayata geçirirsek en ucuz kazanım muhtemelen "aynı konsept, dürüst fiyatlama akışı" olur; ürün kalitesiyle rekabet etmemize bile gerek kalmayabilir.
+**Bizim için:** Fiyatı devre dışı bırakınca ATC'nin ürününde neredeyse hiç şikayet kalmıyor (%7.9) — konsept gerçekten seviliyor. Kalan tek büyük şikayet **bizim de kolayca tekrarlayabileceğimiz bir hata**: atlanamaz/uzun onboarding. Aviation Radio'yu kurarken en ucuz ve en yüksek etkili karar muhtemelen "onboarding'i baştan atlanabilir yap" olacak — rakip bunu hâlâ çözmedi.
 
-### FlightDeck – Flight Tracker — 98 / 140 negatif (%70.0, en yüksek oran) · trend: iyileşiyor ama hâlâ kötü (Nisan %100 → Ağustos %56)
+### FlightDeck – Flight Tracker — sadece 21 saf ürün şikayeti / 140 toplam (%15.0)
 
-**Şikayet dağılımı:** Monetization %52.0 · Pricing %51.0 · Performance And Bugs %22.4 · Payment %21.4 · Feature Requests %16.3
+**Şikayet dağılımı (küçük örneklem):** Performance And Bugs %71.4 · Feature Requests %28.6 · Design %28.6 · Comparative Feedback %19.0 · Content %19.0
 
-- **Ürünün kendi vaadini bozan performans sorunu:** *"Every [time it] loads incredibly slow, if at all... I'll regularly open the app to identify a plane, wait 30 seconds while nothing loads, open flightradar, watch an ad and then identify the flight on flightradar before [coming back]."* — kullanıcı, ücretli uygulamayı terk edip ücretsiz rakibi (FlightRadar24, reklamlı) workaround olarak kullanıyor. Bu tek yorum, "ücretli olmak yetmiyor, işe yaramak lazım" ilkesinin en net kanıtı.
-- **Deneme süresi bittiğinde değil, başlarken ücretlendirme:** *"Subscription was canceled within the free trial on the first day that I began it. I was still charged the full price three days later and Apple was unable to refund the charge because of misleading terms within the app itself."* / *"Apple billed me for the subscription after i forgot to cancel, immediately tried to refund and even though I had not even touched the app since i started the free trial was denied a refund."*
-- **Atlanamaz onboarding + free trial yok (ATC'nin aynı hatası, daha kötü versiyonu):** *"Here's a 10 minute, unskippable tutorial, in case you've never used a touch screen in your life. At the end, there's no free trial just a mandatory pay wall to see if you like it, all for giving you information that's readily available [elsewhere]."*
+- **Temel işlev bozuk, yön bile yanlış:** *"Trying the 3 day trial and every flight I click on on the map shows wrong flight info. Plane obviously just left ORD and the info shows it inbound to ORD from Savannah."* — uçuş takibi uygulamasının en temel vaadi (nereye gittiğini doğru göstermek) çalışmıyor.
+- **Ürün terk edilip ücretsiz rakibe geçiliyor:** *"I'll regularly open the app to identify a plane, wait 30 seconds while nothing loads, open flightradar, watch an ad and then identify the flight on flightradar before switching back."*
+- **Kullanıcının kendi teşhisi, gerçek bir uyarı:** *"This app is a nice idea but it has strong AI code energy... I think a developer with better taste should take this idea and build a more user-friendly and less buggy app."* — ACARS konsepti seviliyor, uygulama güvenilmiyor.
+- **Aynı onboarding hatası:** *"Endless intro to app... just let me use the app instead."*
 
-**Bizim için:** FlightDeck, ATC'nin yaptığı her hatayı (atlanamaz onboarding, agresif faturalama) tekrarlamış ve üstüne performans sorunları eklemiş — negatif oranı %70 ile örneklemdeki en yüksek uygulama. ACARS özelliği gerçek bir farklılaşma olsa da, temel işlevi (uçuş arama, harita) güvenilir çalıştırmadan hiçbir özellik kurtarmıyor. Aviation Radio'ya başlarken önceliğin "yeni özellik" değil "temel akışın kesintisiz çalışması" olduğunun kanıtı.
+**Bizim için:** FlightDeck'te fiyat hariç kalan tek büyük tema performans/güvenilirlik (%71.4) — ACARS gibi gerçek bir farklılaşma özelliği, temel harita ve arama çalışmadığı için değerini kaybediyor. Aviation Radio'da öncelik sırası netleşiyor: (1) temel akış hatasız çalışsın, (2) onboarding atlanabilir olsun, (3) ancak ondan sonra ACARS/ATC gibi farklılaştırıcı katmanlar. Fiyatlama stratejisi bu üçünden sonra gelir — rakiplerin ikisi de fiyatı düzeltmeden önce ürünü düzeltmesi gerekirken tam tersini yapmış.
 
